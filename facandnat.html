@@ -1,0 +1,169 @@
+   <!DOCTYPE html>
+<html>
+<head>
+    <style>
+    
+    body {
+
+        text-align: center;
+    }
+
+    h1 {
+
+/* TEXT PROPERTIES*/
+
+
+  z-index: 9999;
+  font-family: Verdana, Geneva, sans-serif;
+  color: black;
+
+  text-align: center;
+}
+
+  h2 {
+
+/* TEXT PROPERTIES*/
+
+
+  z-index: 9998;
+  font-family: Verdana, Geneva, sans-serif;
+  color: black;
+
+  text-align: center;
+}
+
+  p {
+
+/* TEXT PROPERTIES*/
+
+
+
+  z-index: 9997;
+  font-family: Verdana, Geneva, sans-serif;
+  color: black;
+
+  text-align: center;
+}
+
+
+/* Button style */
+.button {
+  background-color: #ffe396;
+  border: 1 px inset black;
+  border-radius: 8px;
+  color: black;
+  padding: 6px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 50%;
+  transition: background-color 0.3s ease;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+.button:hover {
+  background-color: #ebcf83;
+
+  border: 1px inset black;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<h1>Factorial and Natural Numbers</h1>
+
+<html>
+<head>
+
+
+
+<form>
+    <p>Factorial</p>
+  <label for="i1">Factorial</label>
+  <input type="number" id="i1" name="i1">
+  <button onclick="factorial()">Compute</button>
+
+  <div>
+
+    <label id="fvalue">Factorial is:</label>
+</div>
+
+<p>Sum</p>
+  <label for="i2">Sum</label>
+  <input type="number" id="i2" name="i2">
+  <button onclick="sum()">Compute</button>
+
+  <div>
+
+    <label id="svalue">Sum is:</label>
+</div>
+    <p>First N Natural Numbers</p>
+  <label for="i3">Sum</label>
+  <input type="number" id="i3" name="i3">
+  <button onclick="ave()">Compute</button>
+
+  <div>
+
+    <label id="avalue">Average is:</label>
+</div>
+
+</form>
+
+<div>
+<a href="index.html" type="button" class="button">Return to Main Page</a>
+</div>
+
+
+
+
+
+<script>
+
+//the good stuff
+
+function factorial(){
+c1 = document.getElementById("i1").value*1;
+total = 1;
+while (c1 > 1) {
+    total = total * c1;
+  	c1--;
+}
+ document.getElementById("fvalue").innerHTML= "Factorial is: " + total;
+}
+
+function sum(){
+c2 = document.getElementById("i2").value*1;
+counter = 1;
+total = 0;
+do{
+
+total = total + counter;
+counter++;
+}
+while(counter <= c2)
+
+document.getElementById("svalue").innerHTML= "Sum is: " + total;
+}
+
+function ave(){
+input = document.getElementById("i3").value*1;
+total = 0;
+
+  			for (i = 0; i <= input; i++){
+  				total = total + i;
+  			}
+
+  			average = total/input;
+
+document.getElementById("avalue").innerHTML= "Average is: " + average;
+}
+
+</script>
+</body>
+</html>

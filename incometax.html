@@ -1,0 +1,146 @@
+  <!DOCTYPE html>
+<html>
+<head>
+    <style>
+    
+    body {
+
+        text-align: center;
+    }
+
+    h1 {
+
+/* TEXT PROPERTIES*/
+
+
+  z-index: 9999;
+  font-family: Verdana, Geneva, sans-serif;
+  color: black;
+
+  text-align: center;
+}
+
+  h2 {
+
+/* TEXT PROPERTIES*/
+
+
+  z-index: 9998;
+  font-family: Verdana, Geneva, sans-serif;
+  color: black;
+
+  text-align: center;
+}
+
+  p {
+
+/* TEXT PROPERTIES*/
+
+
+
+  z-index: 9997;
+  font-family: Verdana, Geneva, sans-serif;
+  color: black;
+
+  text-align: center;
+}
+
+
+/* Button style */
+.button {
+  background-color: #ffe396;
+  border: 1 px inset black;
+  border-radius: 8px;
+  color: black;
+  padding: 6px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 50%;
+  transition: background-color 0.3s ease;
+  margin: 4px 2px;
+  cursor: pointer;
+
+}
+
+.button:hover {
+  background-color: #ebcf83;
+
+  border: 1px inset black;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<h1>Income Tax Calculator</h1>
+
+<html>
+<head>
+
+
+
+<form>
+  <label for="base">Base</label>
+  <input type="number" id="base" name="base">
+  <button onclick="tax()">Compute</button>
+
+  <div>
+
+    <label id="incometaxvalue">Income Tax is:</label>
+</div>
+</form>
+
+<div>
+<a href="index.html" type="button" class="button">Return to Main Page</a>
+</div>
+
+
+
+
+
+<script>
+
+//the good stuff
+
+function tax(){
+ rate = 0;
+ inctax = 0;
+ taxinc = document.getElementById("base").value*1;
+
+    if (taxinc > 8000000) {
+        rate = (taxinc - 8000000) * 0.35;
+        inctax = 2410000 + rate;
+
+    } else if (taxinc > 2000000) {
+        rate = (taxinc - 2000000) * 0.32;
+        inctax = 490000 + rate;
+
+    } else if (taxinc > 800000) {
+        rate = (taxinc - 800000) * 0.30;
+        inctax = 130000 + rate;
+
+    } else if (taxinc > 400000) {
+        rate = (taxinc - 400000) * 0.25;
+        inctax = 30000 + rate;
+
+    } else if (taxinc > 250000) {
+        rate = (taxinc - 250000) * 0.20;
+        inctax = rate; // Base tax is ₱0
+        
+    } else { 
+        inctax = 0;
+    }
+
+  document.getElementById("incometaxvalue").innerHTML= "Income Tax is: " + inctax;
+
+
+}
+
+
+</script>
+</body>
+</html>
