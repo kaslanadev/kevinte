@@ -133,8 +133,10 @@ total = 1;
 while (c1 > 1) {
     total = total * c1;
   	c1--;
+
 }
  document.getElementById("fvalue").innerHTML= "Factorial is: " + total;
+ return false;
 }
 
 function sum(){
@@ -145,10 +147,12 @@ do{
 
 total = total + counter;
 counter++;
+
 }
 while(counter <= c2)
 
 document.getElementById("svalue").innerHTML= "Sum is: " + total;
+return false;
 }
 
 function ave(){
@@ -162,6 +166,7 @@ total = 0;
   			average = total/input;
 
 document.getElementById("avalue").innerHTML= "Average is: " + average;
+return false;
 }
 
 </script>

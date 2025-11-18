@@ -148,24 +148,28 @@ function ctof(){
 c1 = document.getElementById("i1").value*1;
 output1 =  (c1 * 9/5) + 32;
 document.getElementById("fvalue").innerHTML = "Value in Fahrenheit: " + output1;
+return false;
 }
 
 function ftoc(){
 c2 = document.getElementById("i2").value*1;
 output2 =  (c2 -32) * 5/9;
 document.getElementById("cvalue").innerHTML = "Value in Celsius: " + output2;
+return false;
 }
 
 function mtof(){
 c3 = document.getElementById("i3").value*1;
 output3 =  c3 * 3.281;
 document.getElementById("fevalue").innerHTML = "Value in Feet: " + output3;
+return false;
 }
 
 function ftom(){
 c4 = document.getElementById("i4").value*1;
 output4 =  c4 / 3.281;
 document.getElementById("mvalue").innerHTML = "Value in Meters: " + output4;
+return false;
 }
 
 
